@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Roomy</string>
+    <string name="string_login">ورود</string>
+    <string name="string_enter_mobile">شماره موبایل خود را وارد کنید</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_step_to_activate">مرحله بعد</string>
+    <string name="string_search_hint">دنبال چی میگردی؟</string>
+</resources>

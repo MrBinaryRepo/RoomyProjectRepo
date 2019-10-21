@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:focusable="true"
+        android:clickable="true"
+        android:background="?selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgServiceImage"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/sample_service"
+            android:layout_height="140dp"/>
+        <TextView
+            android:id="@+id/txtServiceTitle"
+            android:text="بوفه صبحانه لاکچری "
+            android:layout_width="match_parent"
+            android:layout_below="@id/imgServiceImage"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_height="35dp"/>
+        <View
+            android:layout_marginBottom="3dp"
+            android:id="@+id/divider1"
+            android:background="@color/gray300"
+            android:layout_below="@id/txtServiceTitle"
+            android:layout_width="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_height="1dp"/>
+        <TextView
+            android:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است "
+            android:layout_width="match_parent"
+            android:layout_below="@id/divider1"
+            android:gravity="center|top|right"
+            android:id="@+id/txtDescription"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:lineSpacingExtra="3dp"
+            android:textSize="11sp"
+            android:padding="3dp"
+            android:textColor="@color/gray800"
+            android:layout_height="60dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

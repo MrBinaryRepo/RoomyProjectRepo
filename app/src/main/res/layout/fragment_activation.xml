@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    tools:context=".view.fragment.authorizationActivity.ActivationFragment">
+<EditText
+    android:layout_width="180dp"
+    android:id="@+id/edtActiveCode"
+    android:maxLines="1"
+    android:inputType="number"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/round_border_shape"
+    android:gravity="center"
+    android:textSize="12sp"
+    android:maxLength="5"
+    android:padding="10dp"
+    android:hint="کد تایید را وارد کنید"
+    android:layout_height="40dp"/>
+<Button
+    android:id="@+id/btnActiveUser"
+    android:layout_width="120dp"
+    android:text="@string/string_login"
+    android:textSize="14sp"
+    android:textColor="@color/white"
+    android:padding="10dp"
+android:layout_below="@id/edtActiveCode"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/round_solid_shape"
+    android:layout_centerHorizontal="true"
+    android:layout_height="40dp"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_below="@id/btnActiveUser"
+    android:text="ارسال مجدد کد تایید"
+    android:layout_height="wrap_content"
+    android:textSize="15sp"
+    android:layout_centerHorizontal="true"
+    android:textColor="@color/colorPrimaryDark"
+    android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtTimerCountDown"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/btnActiveUser"
+        android:text="02:50"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"/>
+</RelativeLayout>

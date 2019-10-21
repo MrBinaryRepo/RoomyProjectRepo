@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/manageFragmentToolbar"
+        android:layout_width="match_parent"
+        android:background="@drawable/semicircle_rounded_gradiant_bottom"
+        android:paddingTop="10dp"
+        android:layout_height="200dp"/>
+
+        <RelativeLayout
+            android:layout_below="@id/manageFragmentToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.app.roomy.util.customViews.preLolipopViews.TextView.PreLollipopTextView
+            android:layout_width="140dp"
+            android:text="مدیریت پروفایل"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/btnCloseNav"
+            android:background="@drawable/round_white_shape"
+            android:drawablePadding="3dp"
+            android:clickable="true"
+            android:layout_marginBottom="10dp"
+            android:focusable="true"
+            android:padding="10dp"
+            android:textSize="13sp"
+            android:gravity="center|right"
+            app:drawableRight="@drawable/ic_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+
+        <com.app.roomy.util.customViews.preLolipopViews.TextView.PreLollipopTextView
+            android:layout_width="140dp"
+            android:text="ثبت آگهی جدید"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@drawable/round_white_shape"
+            android:layout_below="@id/btnCloseNav"
+            android:id="@+id/btnNewAd"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="3dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textSize="13sp"
+            android:padding="10dp"
+            android:gravity="center|right"
+            app:drawableRight="@drawable/ic_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+
+
+        <com.app.roomy.util.customViews.preLolipopViews.TextView.PreLollipopTextView
+            android:layout_width="140dp"
+            android:text="درباره ما"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@drawable/round_white_shape"
+            android:id="@+id/btnAboutUs"
+            android:layout_below="@id/btnNewAd"
+            android:drawablePadding="3dp"
+            android:textSize="13sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:gravity="center|right"
+            app:drawableRight="@drawable/ic_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>
+</FrameLayout>

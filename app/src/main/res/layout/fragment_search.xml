@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/cardSearchBox"
+    app:cardCornerRadius="20dp"
+    android:layout_height="40dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<ImageView
+    android:layout_alignParentRight="true"
+    android:layout_width="30dp"
+    android:id="@+id/imgSearchHouse"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="3dp"
+    android:background="?selectableItemBackgroundBorderless"
+    android:layout_height="match_parent"
+    app:srcCompat="@drawable/ic_search"/>
+
+    <EditText
+        android:layout_toLeftOf="@id/imgSearchHouse"
+        android:layout_width="match_parent"
+        android:gravity="center|right"
+        android:padding="5dp"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:id="@+id/edtSearch"
+        android:maxLength="50"
+        android:inputType="text"
+        android:background="@drawable/border_shape"
+        android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_below="@id/cardSearchBox"
+    android:id="@+id/recyclerSearchedHouses"
+    android:layout_height="match_parent"/>
+</RelativeLayout>
+
+</FrameLayout>

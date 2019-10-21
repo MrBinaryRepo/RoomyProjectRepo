@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relFilterSorting"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="?actionBarSize"
+        android:visibility="visible"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:id="@+id/imgSortViewList"
+            android:focusable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/ic_view_list" />
+        <ImageView
+            android:id="@+id/imgSortViewModule"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@id/imgSortViewList"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            app:srcCompat="@drawable/ic_view_module" />
+        <com.app.roomy.util.customViews.preLolipopViews.TextView.PreLollipopTextView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/round_border_gray"
+            android:gravity="center"
+            app:drawableRight="@drawable/ic_location"
+            android:text="نزدیک های من"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerHouses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relFilterSorting" />
+</RelativeLayout>
+
+</FrameLayout>

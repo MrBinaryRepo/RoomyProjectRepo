@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/landActivityRootView"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/colored_gradiant"
+        tools:context=".view.activity.LandActivity">
+
+
+
+        <RelativeLayout
+            android:id="@+id/relLandToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <ImageView
+                android:id="@+id/btnNavigateMenu"
+                app:srcCompat="@drawable/ic_menu"
+                android:layout_alignParentRight="true"
+                android:layout_width="35dp"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?selectableItemBackground"
+                android:elevation="5dp"
+                android:layout_height="35dp"/>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_below="@id/relLandToolbar"
+            android:id="@+id/landActivityPlaceHolder"
+            android:layout_width="match_parent"
+            android:layout_above="@id/bottomNavMenu"
+            android:elevation="5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/semicircle" />
+
+
+
+        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:id="@+id/bottomNavMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:mbn_defaultIconColor="#90a4ae"
+            app:mbn_rippleColor="#2f424242"
+            app:mbn_shadowColor="#1f212121"
+            app:mbn_selectedIconColor="#ffc3a0"
+            />
+
+
+
+    </RelativeLayout>
+</FrameLayout>

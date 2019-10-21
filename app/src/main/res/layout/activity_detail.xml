@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/colored_gradiant"
+    tools:context=".view.activity.DetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBoxToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="اطلاعات تکمیلی"
+                android:textColor="@color/gray800"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgShareHouseInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/imgBack"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_share" />
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_arrow_back" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardBoxToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBoxSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/sliderViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/sliderIndicatorLand"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/sliderViewPager"
+                        app:ci_orientation="horizontal" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardBoxSlider"
+                android:layout_margin="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtHouseDetailTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="خونه مجردی همراه با کلیه امکانات"
+                        android:textColor="@color/gray800"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtHouseDeposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtHouseDetailTitle"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="ودیعه :100000 تومان"
+                        android:textColor="@color/gray900"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtHousePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtHouseDeposit"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="اجاره ماهانه  10000000 تومان "
+                        android:textColor="@color/gray900"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.app.roomy.util.customViews.preLolipopViews.TextView.PreLollipopTextView
+                        android:id="@+id/txtHouseAddressLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtHousePrice"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="3dp"
+                        android:padding="5dp"
+                        android:text="آدرس"
+                        android:textColor="@color/gray900"
+                        android:textSize="13sp"
+                        app:drawableRight="@drawable/ic_location" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txtHouseAddressLabel"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/gray300" />
+
+                    <TextView
+                        android:id="@+id/txtHouseAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider2"
+                        android:gravity="center|top|right"
+                        android:lineSpacingExtra="5dp"
+                        android:padding="5dp"
+                        android:text="معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند"
+                        android:textColor="@color/gray800"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <com.app.roomy.util.customViews.preLolipopViews.TextView.PreLollipopTextView
+                        android:id="@+id/btnNavigateLocation"
+                        android:layout_below="@id/txtHouseAddress"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_container_shape"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="مکان یابی تا محل"
+                        android:textColor="@color/gray800"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:drawableRight="@drawable/ic_location" />
+
+                    <com.app.roomy.util.customViews.preLolipopViews.TextView.PreLollipopTextView
+                        android:id="@+id/txtHouseDescriptionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnNavigateLocation"
+                        android:layout_alignParentRight="true"
+                        android:drawablePadding="3dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="توضیحات"
+                        android:textColor="@color/gray900"
+                        android:textSize="13sp"
+                        app:drawableRight="@drawable/ic_information" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txtHouseDescriptionLabel"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/gray300" />
+
+
+                    <TextView
+                        android:id="@+id/txtHouseDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider3"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center|top|right"
+                        android:lineSpacingExtra="5dp"
+                        android:padding="5dp"
+                        android:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
+                        android:textColor="@color/gray800"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <include
+                        layout="@layout/house_bed_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtHouseDescription" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
